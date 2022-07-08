@@ -8,6 +8,7 @@ import { useToast } from "@chakra-ui/toast";
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { async } from "@firebase/util";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -35,10 +36,10 @@ const Login = () => {
       setLoading(false);
       return;
     }
-    console.log(email, password);
 
     try {
       const result = await signInWithEmailAndPassword(auth, email, password); //fb
+      console.log(result);
 
       toast({
         title: "Đăng nhập thành công",
@@ -63,6 +64,27 @@ const Login = () => {
       });
       setLoading(false);
     }
+  };
+
+  const submitGuestAccount = async () => {
+    const result = await signInWithEmailAndPassword(
+      auth,
+      "guest@test.com",
+      "guesttest"
+    ); //fb
+    console.log(result);
+
+    toast({
+      title: "Đăng nhập thành công",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
+
+    //console.log(result, "userInfo on sign up");
+    setLoading(false);
+    navigate("/transactions");
   };
 
   return (
@@ -118,15 +140,11 @@ const Login = () => {
         width="100%"
         disabled={user}
         onClick={() => {
-          setEmail("guest@test.com");
-          setPassword("guesttest");
-          setTimeout(() => {
-            submitHandler();
-          }, 100);
+          submitGuestAccount();
         }}
         isLoading={loading}
       >
-        Tài khoản khách
+        Dùng tài khoản khách
       </Button>
     </VStack>
   );
