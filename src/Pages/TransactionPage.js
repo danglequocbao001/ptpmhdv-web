@@ -60,7 +60,7 @@ const TransactionPage = () => {
             </Box>
             <Box
               d="flex"
-              bg="purple.900"
+              bg="purple.700"
               //bg="#0F3057"
               w={{ base: "85%", md: "33%" }}
               alignItems="center"

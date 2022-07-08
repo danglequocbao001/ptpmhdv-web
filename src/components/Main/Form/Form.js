@@ -106,7 +106,7 @@ const FormTrans = () => {
       category.length === 0
     ) {
       toast({
-        title: "Something Went Wrong ! Enter required Details Again",
+        title: "Hãy điền vào những chỗ còn trống",
         status: "warning",
         duration: 5000,
         isClosable: true,

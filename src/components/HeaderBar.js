@@ -133,8 +133,8 @@ const HeaderBar = () => {
             color="black"
             //name={user.displayName || user.name || null}
             //name={user.name}
-            _hover={{ background: "pink.600", color: "gray.200" }}
-            _active={{ background: "pink.600", color: "gray.200" }}
+            _hover={{ background: "orange.500", color: "gray.200" }}
+            _active={{ background: "orange.600", color: "gray.200" }}
             onClick={onOpen}
           />
         )}
@@ -142,13 +142,13 @@ const HeaderBar = () => {
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent /* fontFamily="Work sans bold" */ bg="purple.200">
+        <DrawerContent /* fontFamily="Work sans bold" */ bg="blue.200">
           <DrawerHeader
             textAlign="center"
             borderBottom="2px solid white"
             //fontSize="2xl"
             //bg="#0F3057"
-            bg="purple.900"
+            bg="blue.900"
             color="gray.200"
           >
             <Heading as="h2" size="xl" fontFamily="Work sans bold">
@@ -169,7 +169,7 @@ const HeaderBar = () => {
               cursor="pointer"
               borderColor="black"
               borderWidth="2px"
-              bg="purple.800"
+              bg="blue.800"
               //w={36}
               //h={36}
               //color="gray.100"
@@ -192,7 +192,7 @@ const HeaderBar = () => {
             <Box
               d="flex"
               flexDir="column"
-              bg="purple.900"
+              bg="blue.900"
               gap="4px"
               alignItems="center"
               borderRadius="7px"
@@ -201,7 +201,7 @@ const HeaderBar = () => {
               pb={3}
               border="1.5px solid black"
               cursor="pointer"
-              _hover={{ bg: "purple.800" }}
+              _hover={{ bg: "blue.800" }}
             >
               <Icon
                 as={FaBalanceScale}
@@ -229,7 +229,7 @@ const HeaderBar = () => {
             <Box
               d="flex"
               flexDir="column"
-              bg="purple.900"
+              bg="blue.900"
               gap="4px"
               alignItems="center"
               borderRadius="7px"
@@ -238,7 +238,7 @@ const HeaderBar = () => {
               pb={3}
               border="1.5px solid black"
               cursor="pointer"
-              _hover={{ bg: "purple.800" }}
+              _hover={{ bg: "blue.800" }}
             >
               <Box
                 d="flex"
@@ -288,7 +288,7 @@ const HeaderBar = () => {
               width="100%"
               fontWeight="bold"
               colorScheme="pink"
-              //bg="purple.800"
+              //bg="blue.800"
               fontSize="xl"
               color="gray.200"
               p={1.5}
