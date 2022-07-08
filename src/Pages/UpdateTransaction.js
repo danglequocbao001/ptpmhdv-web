@@ -27,7 +27,7 @@ const initialState = {
 };
 
 const UpdateTransaction = () => {
-  const [trData, setTrData] = useState({});//useState(null)
+  const [trData, setTrData] = useState({}); //useState(null)
   const [formData, setFormData] = useState(initialState);
   const [datePicker, setDatePicker] = useState(new Date());
   //const [amount, setAmount] = useState(Number);
@@ -72,7 +72,7 @@ const UpdateTransaction = () => {
       formData.category.length === 0
     ) {
       toast({
-        title: "Oops!! Please check & enter new Transaction Details Again",
+        title: "Vui lòng kiểm tra và nhập lại chi tiết giao dịch mới",
         status: "warning",
         duration: 5000,
         isClosable: true,

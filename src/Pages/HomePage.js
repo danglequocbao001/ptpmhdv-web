@@ -68,8 +68,8 @@ const HomePage = () => {
           >
             <Tabs isFitted variant="soft-rounded" colorScheme="pink">
               <TabList mb="1em">
-                <Tab fontWeight="bold">Login</Tab>
-                <Tab fontWeight="bold">Sign Up</Tab>
+                <Tab fontWeight="bold">Đăng Nhập</Tab>
+                <Tab fontWeight="bold">Đăng Ký</Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>

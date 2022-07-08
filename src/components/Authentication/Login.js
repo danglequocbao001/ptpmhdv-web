@@ -26,7 +26,7 @@ const Login = () => {
     setLoading(true);
     if (!email || !password) {
       toast({
-        title: "Please Fill all the Feilds",
+        title: "Hãy điền vào những chỗ còn trống",
         status: "warning",
         duration: 5000,
         isClosable: true,
@@ -68,25 +68,25 @@ const Login = () => {
   return (
     <VStack spacing="10px">
       <FormControl id="email" isRequired>
-        <FormLabel>Email Address</FormLabel>
+        <FormLabel>Địa chỉ Email</FormLabel>
         <Input
           value={email}
           type="email"
           focusBorderColor="pink.400"
-          placeholder="Enter Your Email Address"
+          placeholder="Nhập địa chỉ email"
           onChange={(e) => setEmail(e.target.value)}
           errorBorderColor="red.300"
         />
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel>Mật khẩu</FormLabel>
         <InputGroup size="md">
           <Input
             value={password}
             focusBorderColor="pink.400"
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
-            placeholder="Enter password"
+            placeholder="Nhập mật khẩu"
             errorBorderColor="red.300"
           />
           <InputRightElement width="4.5rem">
@@ -96,7 +96,7 @@ const Login = () => {
               size="sm"
               onClick={handleClick}
             >
-              {show ? "Hide" : "Show"}
+              {show ? "Ẩn" : "Hiện"}
             </Button>
           </InputRightElement>
         </InputGroup>
@@ -109,7 +109,7 @@ const Login = () => {
         onClick={submitHandler}
         isLoading={loading}
       >
-        Login
+        Đăng nhập
       </Button>
       <Button
         fontWeight="bold"
@@ -122,7 +122,7 @@ const Login = () => {
           setPassword("guesttest");
         }}
       >
-        {user ? "Already Loged In !!" : "Guest User Login"}
+        {user ? "Already Loged In !!" : "Tài khoản khách"}
       </Button>
     </VStack>
   );

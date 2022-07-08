@@ -9,19 +9,16 @@ import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { BudgetContext } from "../../context/budget-context";
 
-
 const Signup = () => {
   const [show, setShow] = useState(false);
- 
+
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
 
-
   const { user } = useContext(BudgetContext);
-
 
   const toast = useToast();
   const navigate = useNavigate();
@@ -31,11 +28,11 @@ const Signup = () => {
   const submitHandler = async () => {
     setLoading(true);
 
-    console.log('signup button clicked');
+    console.log("signup button clicked");
 
     if (!name || !email || !password || !confirmpassword) {
       toast({
-        title: "Please Fill all the Feilds",
+        title: "Hãy điền vào những chỗ còn trống",
         status: "warning",
         duration: 3000,
         isClosable: true,
@@ -56,11 +53,15 @@ const Signup = () => {
       return;
     }
 
-    console.log(name, email,'on Signup name email');
-    
-    try{
+    console.log(name, email, "on Signup name email");
 
-      const result = await createUserWithEmailAndPassword( auth, email, password, name );
+    try {
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+        name
+      );
 
       toast({
         title: `Sign-Up Successful.`,
@@ -74,9 +75,8 @@ const Signup = () => {
 
       setLoading(false);
       navigate("/transactions");
-
-    }catch(error){
-      console.log(error.message);  
+    } catch (error) {
+      console.log(error.message);
       toast({
         title: "Error Occured!",
         description: error.response.data.message,
@@ -88,72 +88,82 @@ const Signup = () => {
       setLoading(false);
     }
   };
-    
 
   return (
     <VStack spacing="5px">
       <FormControl id="first-name" isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel>Họ Tên</FormLabel>
         <Input
-          placeholder="Enter Your Name"
+          placeholder="Nhập họ tên"
           onChange={(e) => setName(e.target.value)}
-          focusBorderColor='pink.400'
-          errorBorderColor='red.300'
+          focusBorderColor="pink.400"
+          errorBorderColor="red.300"
         />
       </FormControl>
       <FormControl id="email" isRequired>
-        <FormLabel>Email Address</FormLabel>
+        <FormLabel>Địa Chỉ Email</FormLabel>
         <Input
           type="email"
-          placeholder="Enter Your Email Address"
+          placeholder="Nhập địa chỉ email"
           onChange={(e) => setEmail(e.target.value)}
-          focusBorderColor='pink.400'
-          errorBorderColor='red.300'
+          focusBorderColor="pink.400"
+          errorBorderColor="red.300"
         />
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel>Mật khẩu</FormLabel>
         <InputGroup size="md">
           <Input
             type={show ? "text" : "password"}
-            placeholder="Enter Password"
+            placeholder="Nhập mật khẩu"
             onChange={(e) => setPassword(e.target.value)}
-            focusBorderColor='pink.400'
-            errorBorderColor='red.300'
+            focusBorderColor="pink.400"
+            errorBorderColor="red.300"
           />
           <InputRightElement width="4.5rem">
-            <Button colorScheme='purple' h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+            <Button
+              colorScheme="purple"
+              h="1.75rem"
+              size="sm"
+              onClick={handleClick}
+            >
+              {show ? "Ẩn" : "Hiện"}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
+        <FormLabel>Xác nhận mật khẩu</FormLabel>
         <InputGroup size="md">
           <Input
             type={show ? "text" : "password"}
-            placeholder="Confirm password"
+            placeholder="Xác nhận mật khẩu"
             onChange={(e) => setConfirmpassword(e.target.value)}
-            focusBorderColor='pink.400'
-            errorBorderColor='red.300'
+            focusBorderColor="pink.400"
+            errorBorderColor="red.300"
           />
           <InputRightElement width="4.5rem">
-            <Button colorScheme='purple' h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+            <Button
+              colorScheme="purple"
+              h="1.75rem"
+              size="sm"
+              onClick={handleClick}
+            >
+              {show ? "Ẩn" : "Hiện"}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <Button fontWeight="bold"
+      <Button
+        fontWeight="bold"
         colorScheme="pink"
         width="100%"
-        style={{ marginTop: '15px', fontWeight: 'bold' }}
+        style={{ marginTop: "15px", fontWeight: "bold" }}
         onClick={submitHandler}
         isLoading={loading}
         disabled={user}
       >
-      {user ? "Already Loged In !!" :'Signup'}
+        {user ? "Already Loged In !!" : "Signup"}
       </Button>
     </VStack>
   );
