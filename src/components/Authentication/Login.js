@@ -122,7 +122,7 @@ const Login = () => {
           setPassword("guesttest");
           setTimeout(() => {
             submitHandler();
-          }, 50);
+          }, 100);
         }}
         isLoading={loading}
       >
