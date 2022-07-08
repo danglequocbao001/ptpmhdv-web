@@ -59,7 +59,8 @@ const HeaderBar = () => {
         borderWidth="0.2em"
         borderColor="gray.300"
         //bg="#0F3057"
-        bg="purple.900"
+        bg="#009adb"
+        borderBottomRadius={10}
       >
         <Box
           d="flex"
@@ -81,7 +82,7 @@ const HeaderBar = () => {
             alignItems="start"
             gap="2px"
           >
-            <Badge
+            {/* <Badge
               variant="solid"
               colorScheme="gray"
               fontSize="xs"
@@ -97,7 +98,7 @@ const HeaderBar = () => {
             >
               {" "}
               Save Grow
-            </Badge>
+            </Badge> */}
           </Box>
         </Box>
 
@@ -126,9 +127,9 @@ const HeaderBar = () => {
             fontFamily="Work sans bold"
             size="md"
             cursor="pointer"
-            borderColor="black"
+            borderColor="#fff"
             borderWidth="2px"
-            bg="purple.400"
+            bg="#FF7537"
             color="black"
             //name={user.displayName || user.name || null}
             //name={user.name}
@@ -221,7 +222,7 @@ const HeaderBar = () => {
                 fontWeight="bold"
                 textAlign="center"
               >
-                Balance: ₹{balance}
+                Số dư: ₹{balance}
               </Badge>
             </Box>
 

@@ -7,7 +7,7 @@ import "chart.js/auto";
 
 const Details = ({ title }) => {
   const { total, chartData } = useTransactions(title);
-
+  console.log(chartData);
   return (
     <Box
       d="flex"

@@ -14,6 +14,8 @@ const TransactionList = () => {
   const toast = useToast();
   const navigate = useNavigate();
 
+  console.log(transactions);
+
   const deleteHandler = (id) => {
     console.log("delete clicked", id);
     deleteTransaction(id);
@@ -97,7 +99,7 @@ const TransactionList = () => {
               aria-label="Delete Transaction"
               icon={<EditIcon />}
               mr={2}
-              onClick={/* findTransaction.bind(null, transaction.id) */ ()=>findTransaction(transaction.id)}
+              onClick={() => findTransaction(transaction.id)}
             />
             <IconButton
               variant="ghost"

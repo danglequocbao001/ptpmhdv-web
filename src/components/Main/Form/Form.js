@@ -15,7 +15,7 @@ import {
   FormLabel,
   Spinner,
   Select,
-  Input
+  Input,
 } from "@chakra-ui/react";
 import {
   InputGroup,
@@ -36,7 +36,7 @@ const initialState = {
   date: formatDate(new Date()),
 };
 
-const Form = () => {
+const FormTrans = () => {
   ///const [formData, setFormData] = useState(initialState);
   const [datePicker, setDatePicker] = useState("");
   const [category, setCategory] = useState("");
@@ -48,7 +48,12 @@ const Form = () => {
 
   //const { segment } = useSpeechContext();
 
-  const { addTransaction, editTransaction, deleteTransaction, setEditTransaction } = useContext(BudgetContext);
+  const {
+    addTransaction,
+    editTransaction,
+    deleteTransaction,
+    setEditTransaction,
+  } = useContext(BudgetContext);
   const toast = useToast();
 
   //console.log(formData, "formData state");
@@ -87,7 +92,6 @@ const Form = () => {
       setAmount("");
       setCategory("");
     }
-   
   }, [editTransaction]);
 
   const createTransaction = () => {
@@ -118,7 +122,7 @@ const Form = () => {
     }
 
     setLoading(true);
-    if(!editTransaction){
+    if (!editTransaction) {
       toast({
         title: "Transaction Successful",
         status: "success",
@@ -126,22 +130,22 @@ const Form = () => {
         isClosable: true,
         position: "bottom",
       });
-  
+
       addTransaction({
         amount: Number(amount),
         category: category,
         type: transactionType,
         date: datePicker,
-        id:uuidv4() ,
+        id: uuidv4(),
       });
-    }else{
+    } else {
       deleteTransaction(editTransaction.id);
       addTransaction({
         amount: Number(amount),
         category: category,
         type: transactionType,
         date: datePicker,
-        id: uuidv4()
+        id: uuidv4(),
       });
       toast({
         title: "Transaction Updated Successfully",
@@ -151,13 +155,13 @@ const Form = () => {
         position: "bottom",
       });
     }
-  
+
     setDatePicker("");
     setTransactionType("Income");
     setAmount("");
     setCategory("");
-    setEditTransaction(null);   
-     
+    setEditTransaction(null);
+
     //console.log(amount);
     setLoading(false);
     //setFormData(initialState);
@@ -303,4 +307,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormTrans;

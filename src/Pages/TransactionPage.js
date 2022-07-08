@@ -56,7 +56,7 @@ const TransactionPage = () => {
 
               //flexGrow={1.5}
             >
-              <Details title="Income" />
+              <Details title="Khoản thu" />
             </Box>
             <Box
               d="flex"
@@ -76,19 +76,6 @@ const TransactionPage = () => {
               <Main />
             </Box>
             <Box
-              d={{ base: "flex", md: "none" }}
-              bg="green.50"
-              border="1.5px solid black"
-              borderBottom="0.8em solid #00ff00;"
-              p={2}
-              w={{ base: "85%", md: "0%" }}
-              alignItems="center"
-              justifyContent="center"
-              borderRadius="md"
-            >
-              <Details title="Income" />
-            </Box>
-            <Box
               p={2}
               d="flex"
               bg="red.50"
@@ -100,7 +87,7 @@ const TransactionPage = () => {
               justifyContent="center"
               borderRadius="md"
             >
-              <Details title="Expense" />
+              <Details title="Khoản chi" />
             </Box>
           </Box>
         </div>

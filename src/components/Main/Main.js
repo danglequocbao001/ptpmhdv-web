@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Box, } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import { Heading } from "@chakra-ui/react";
 import { BudgetContext } from "../../context/budget-context";
-import Form from "./Form/Form";
+import FormTrans from "./Form/Form";
 import TransactionList from "../TransactionList";
 //import TransactionList from "./List/TransactionList";
 /* import InfoCard from "../InfoCard";
@@ -17,7 +17,7 @@ import {
 const Main = () => {
   const { balance } = useContext(BudgetContext);
   //const { speechState } = useSpeechContext();
-/*   const main = useRef(null);
+  /*   const main = useRef(null);
 
   const executeScroll = () => main.current.scrollIntoView();
 
@@ -52,7 +52,7 @@ const Main = () => {
         border="2px solid #A0AEC0"
         width="97%"
       >
-        Balance: ₹{balance}{" "}
+        Số dư: ₹{balance}{" "}
       </Heading>
 
       <Box
@@ -65,17 +65,15 @@ const Main = () => {
         gap="0.5em"
         //border="2px solid #A0AEC0"
         //p={2}
-
       >
-        <Form/>
+        <FormTrans />
       </Box>
 
-      <Box width="100%" ><TransactionList /></Box>
-
+      <Box width="100%">
+        <TransactionList />
+      </Box>
     </Box>
   );
 };
 
 export default Main;
-
-
