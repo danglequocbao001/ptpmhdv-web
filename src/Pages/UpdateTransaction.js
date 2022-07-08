@@ -193,7 +193,7 @@ const UpdateTransaction = () => {
                 pointerEvents="none"
                 color="gray.300"
                 fontSize="1.2em"
-                children="₹"
+                children="đ"
               />
               <NumberInputField
                 border="2px solid"

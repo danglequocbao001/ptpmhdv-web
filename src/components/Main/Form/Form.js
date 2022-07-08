@@ -251,7 +251,7 @@ const FormTrans = () => {
                   pointerEvents="none"
                   color="gray.300"
                   fontSize="1.2em"
-                  children="₹"
+                  children="đ"
                 />
                 <Input
                   border="2px solid"

@@ -222,7 +222,7 @@ const HeaderBar = () => {
                 fontWeight="bold"
                 textAlign="center"
               >
-                Số dư: ₹{balance}
+                Số dư: {balance}đ
               </Badge>
             </Box>
 

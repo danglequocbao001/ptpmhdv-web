@@ -52,7 +52,7 @@ const Main = () => {
         border="2px solid #A0AEC0"
         width="97%"
       >
-        Số dư: ₹{balance}{" "}
+        Số dư: {balance}đ{" "}
       </Heading>
 
       <Box
