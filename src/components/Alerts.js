@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Alert,
   AlertDescription,
@@ -23,6 +23,10 @@ const Alerts = () => {
       navigate("/");
     }
   };
+
+  useEffect(() => {
+    user ? navigate("/transactions") : navigate("/");
+  }, []);
 
   return (
     <Container maxW="xl" centerContent margin="auto">
