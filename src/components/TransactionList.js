@@ -84,7 +84,7 @@ const TransactionList = () => {
                 {transaction.category}
               </Text>
               <Text fontWeight="bold" fontSize="xs">
-                {`₹${transaction.amount}, ${transaction.date}`}
+                {`${transaction.amount}đ, ${transaction.date}`}
               </Text>
             </Box>
           </Box>

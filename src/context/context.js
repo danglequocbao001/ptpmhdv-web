@@ -13,11 +13,11 @@ const Provider = ({ children }) => {
 
   const [editTransaction, setEditTransaction] = useState(null);
 
-  const findTransaction =(id)=>{
-    const transactionToBeEdited = transactions.find((t)=>t.id===id);
+  const findTransaction = (id) => {
+    const transactionToBeEdited = transactions.find((t) => t.id === id);
     console.log(transactionToBeEdited);
     setEditTransaction(transactionToBeEdited);
-  }
+  };
   //console.log(editTransaction);
 
   const deleteTransaction = (id) => {
@@ -29,8 +29,8 @@ const Provider = ({ children }) => {
   };
 
   const editSingleTransaction = (transaction) => {
-    dispatch({ type: "EDIT_TRANSFER", payload: transaction})
-  }
+    dispatch({ type: "EDIT_TRANSFER", payload: transaction });
+  };
   const balance = transactions.reduce(
     (acc, currVal) =>
       currVal.type === "Expense" ? acc - currVal.amount : acc + currVal.amount,
@@ -59,7 +59,7 @@ const Provider = ({ children }) => {
         setEditTransaction,
         editTransaction,
         findTransaction,
-        editSingleTransaction
+        editSingleTransaction,
       }}
     >
       {children}

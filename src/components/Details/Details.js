@@ -31,7 +31,7 @@ const Details = ({ title }) => {
         {title}
       </Heading>
       <Text fontWeight="bold" fontSize="lg" color="gray.600">
-        ₹{total}
+        {total}đ
       </Text>
       <Doughnut style={{ height: "10px", width: "10px" }} data={chartData} />
     </Box>
