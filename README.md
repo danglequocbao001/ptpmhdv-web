@@ -1,16 +1,16 @@
-# Budget Master
+<!-- # Budget Master
 
 > Track your income and expenses in one place via detailed graphical information to manage your budget.
 
 Manage your budget and transactions. <br>
-Add income & expense and compare your transactions throught their respective percentage 
+Add income & expense and compare your transactions throught their respective percentage
 contribution via easy & descriptive graphically represented data. <br>
 Keep a record of your transactions and manage them to save down the road.
 
 **Its simple, discriptive and easy to use application**
 
 ```
-Few transactions are added beforehand for UI/UX purposes. 
+Few transactions are added beforehand for UI/UX purposes.
 You can always manage/delete them too.
 ```
 
@@ -21,41 +21,41 @@ This is a _responsive web application_ for viewing in both Mobile and Desktop.
 ```
 This is still a work in progress.
 If you find any bugs you can report it to me.
-Pull requests are always welcome. For major changes, 
+Pull requests are always welcome. For major changes,
 please open an issue first to discuss what you would like to change.
 
-```
+``` -->
 
-### Few Screenshots
+<!-- ### Few Screenshots
 
 ![Homepage](/screenshots/master.png "Homepage")
 ![TransactionPage](/screenshots/2.png "TransactionPage")
-![UserDrawer](/screenshots/3.png "UserDrawer")
-
+![UserDrawer](/screenshots/3.png "UserDrawer") -->
 
 ## Deployed
 
-https://budget-master-12.web.app/
+https://ptpmhdv-web.vercel.app/
+
 ## Features
 
 - User Profile.
 - Login & Signup.
 - Incomes and expenses profiles are graphically represented for quick understanding and easy categorical comparison.
-- Authenticated user can access the CRUD functionality. 
+- Authenticated user can access the CRUD functionality.
 - Manageable transactions list.
 - All the data is stored and saved i.e. <i>persistent</i>
 - Fully Responsive.
 
-
 ## Tech Stack
 
-ReactJS, ChartJS, Chakra-UI, Firebase as a Backend Service. 
+ReactJS, ChartJS, Chakra-UI, API Service.
 
 ## Install Dependencies
 
 ```bash
 npm install
 ```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -82,4 +82,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
