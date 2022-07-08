@@ -74,7 +74,7 @@ const HeaderBar = () => {
             w={{ base: 8, md: 12 }}
             h={{ base: 8, md: 12 }}
             color="gray.200"
-            _hover={{ color: "pink.200" }}
+            _hover={{ color: "orange.500" }}
           />
           <Box
             d={{ base: "none", md: "flex" }}
@@ -108,7 +108,7 @@ const HeaderBar = () => {
           cursor="pointer"
           color="gray.200"
           fontFamily="Work sans bold"
-          _hover={{ color: "pink.200" }}
+          _hover={{ color: "orange.500" }}
         >
           Thu Chi
         </Text>
@@ -169,13 +169,13 @@ const HeaderBar = () => {
               cursor="pointer"
               borderColor="black"
               borderWidth="2px"
-              bg="blue.800"
+              bg="blue.500"
               //w={36}
               //h={36}
               //color="gray.100"
               //src={user.photoURL}
               //name={user.name}
-              _hover={{ background: "pink.600", color: "gray.200" }}
+              _hover={{ background: "blue.300", color: "gray.200" }}
             />
 
             <Heading
