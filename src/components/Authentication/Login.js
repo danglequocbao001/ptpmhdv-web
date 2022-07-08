@@ -67,6 +67,7 @@ const Login = () => {
   };
 
   const submitGuestAccount = async () => {
+    setLoading(true);
     const result = await signInWithEmailAndPassword(
       auth,
       "guest@test.com",
