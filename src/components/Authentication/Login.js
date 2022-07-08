@@ -41,7 +41,7 @@ const Login = () => {
       const result = await signInWithEmailAndPassword(auth, email, password); //fb
 
       toast({
-        title: "Login Successful",
+        title: "Đăng nhập thành công",
         status: "success",
         duration: 5000,
         isClosable: true,
@@ -120,9 +120,11 @@ const Login = () => {
         onClick={() => {
           setEmail("guest@test.com");
           setPassword("guesttest");
+          submitHandler();
         }}
+        isLoading={loading}
       >
-        {user ? "Already Loged In !!" : "Tài khoản khách"}
+        Tài khoản khách
       </Button>
     </VStack>
   );

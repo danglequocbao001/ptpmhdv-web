@@ -4,14 +4,14 @@ import HeaderBar from "../components/HeaderBar";
 import Details from "../components/Details/Details";
 import Main from "../components/Main/Main";
 import { BudgetContext } from "../context/budget-context";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Alerts from "../components/Alerts";
 
 import { create } from "apisauce";
 
 const TransactionPage = () => {
   const { user } = useContext(BudgetContext);
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const api = create({
     baseURL: "https://ophim1.com/",
@@ -22,7 +22,7 @@ const TransactionPage = () => {
     // api.get("danh-sach/phim-moi-cap-nhat").then((response) => {
     //   console.log(response.data.items);
     // });
-  });
+  }, []);
 
   return (
     <React.Fragment>

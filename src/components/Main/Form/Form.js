@@ -193,7 +193,7 @@ const FormTrans = () => {
       ) : (
         <>
           <FormControl width="47%" isRequired>
-            <FormLabel htmlFor="type">Type</FormLabel>
+            <FormLabel htmlFor="type">Loại thu chi</FormLabel>
             <Select
               id="type"
               value={transactionType}
@@ -220,7 +220,7 @@ const FormTrans = () => {
           </FormControl>
 
           <FormControl width="47%" isRequired>
-            <FormLabel htmlFor="category">Category</FormLabel>
+            <FormLabel htmlFor="category">Nhóm</FormLabel>
             <Select
               id="category"
               //placeholder="Category"
@@ -244,7 +244,7 @@ const FormTrans = () => {
           </FormControl>
 
           <FormControl width="47%" isRequired>
-            <FormLabel htmlFor="amount">Amount</FormLabel>
+            <FormLabel htmlFor="amount">Số tiền</FormLabel>
             <NumberInput max={50000000000} min={1}>
               <InputGroup focusBorderColor="pink.500">
                 <InputLeftElement
@@ -266,7 +266,7 @@ const FormTrans = () => {
           </FormControl>
 
           <FormControl width="47%" isRequired>
-            <FormLabel htmlFor="date">Date</FormLabel>
+            <FormLabel htmlFor="date">Thời gian</FormLabel>
             <InputGroup focusBorderColor="pink.500" /* color="gray.500" */>
               <DayPickerInput
                 style={{
@@ -301,7 +301,7 @@ const FormTrans = () => {
         marginTop="3px"
         onClick={createTransaction}
       >
-        {editTransaction ? "Edit Transaction" : "Create Transaction"}
+        {editTransaction ? "Edit Transaction" : "Tạo thu chi"}
       </Button>
     </Box>
   );

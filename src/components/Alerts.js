@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 import {
   Alert,
   AlertDescription,
@@ -17,12 +17,12 @@ const Alerts = () => {
 
   const alertHandler = () => {
     //console.log("Alert Handler");
-    if(user){
-      navigate("/transactions")
-    }else if (!user){
-      navigate("/")
+    if (user) {
+      navigate("/transactions");
+    } else if (!user) {
+      navigate("/");
     }
-  }
+  };
 
   return (
     <Container maxW="xl" centerContent margin="auto">
@@ -42,12 +42,18 @@ const Alerts = () => {
         p={6}
         gap="1em"
       >
-        <AlertIcon boxSize="45px" mr={0}  color="pink.600" />
+        {/* <AlertIcon boxSize="45px" mr={0}  color="pink.600" />
         <AlertTitle  fontSize={{base:"2xl", md:"3xl"}} color="red.50" fontFamily="Work sans bold" width="100%" style={{ lineHeight: "1.2em"}}>
           Oops !! Something Went Wrong 😵
         </AlertTitle>
         <AlertDescription maxWidth="lg" fontSize={{base:"lg", md:"xl"}} color="gray.300" >
           Just a Moment. Working on it ⌛
+        </AlertDescription> */}
+
+        <AlertDescription maxWidth="md" color="gray.400" fontSize={20}>
+          {user
+            ? "Chào mừng bạn quay trở lại"
+            : "Phiên đã hết hạn, bạn vui lòng đăng nhập lại"}
         </AlertDescription>
         <Spinner
           thickness="6px"
@@ -56,12 +62,9 @@ const Alerts = () => {
           color="pink.600"
           size="xl"
         />
-        <AlertDescription  maxWidth="md" color="gray.400">
-          ( Still ⌛ Click on the Button Below ⬇️ )
-        </AlertDescription>
         <Button
           width="100%"
-          fontWeight="bold"  
+          fontWeight="bold"
           variant="ghost"
           bg="pink.600"
           color="white"
@@ -72,11 +75,11 @@ const Alerts = () => {
           _hover={{ background: "yellow.300", color: "black" }}
           _active={{ background: "yellow.300", color: "black" }}
         >
-          {user ? "Continue to Managing your Budget" : "Continue to Login"}
+          {user ? "Tiếp tục quản lý tài khoản" : "Về lại trang đăng nhập"}
         </Button>
       </Alert>
     </Container>
-  )
-}
+  );
+};
 
-export default Alerts
+export default Alerts;

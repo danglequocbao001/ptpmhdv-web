@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 //import { useNavigate } from "react-router-dom";
 import {
   Container,
@@ -13,30 +13,29 @@ import {
 import Login from "../components/Authentication/Login";
 import Signup from "../components/Authentication/Signup";
 import { BudgetContext } from "../context/budget-context";
-import Alerts from "../components/Alerts";
 import TransactionPage from "./TransactionPage";
+import { useNavigate } from "react-router-dom";
+import Alerts from "../components/Alerts";
 
 //import { useToast } from "@chakra-ui/toast";
 
 const HomePage = () => {
   const { user } = useContext(BudgetContext);
+  const navigate = useNavigate();
   //const navigate = useNavigate();
 
-  /*   useEffect(() => {
-    if (user) {
-      navigate("/transactions")
-    }
-    
-    // eslint-disable-next-line
-  }, [navigate]);
- */
+  // useEffect(() => {
+  //   if (user) {
+  //     navigate("/transactions");
+  //   }
+  // }, [navigate]);
 
   return (
     <React.Fragment>
       {user ? (
-        // <Alerts />
-        <TransactionPage />
+        <Alerts />
       ) : (
+        // <TransactionPage />
         <Container maxW="xl" centerContent>
           <Box
             d="flex"

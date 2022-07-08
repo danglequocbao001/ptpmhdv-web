@@ -37,13 +37,13 @@ const HeaderBar = () => {
     signOut(auth);
 
     toast({
-      title: "Logout Successful",
+      title: "Đăng xuất thành công",
       status: "success",
       duration: 3000,
       isClosable: true,
       position: "bottom",
     });
-
+    localStorage.clear();
     onClose();
     navigate("/");
   };
@@ -276,7 +276,7 @@ const HeaderBar = () => {
                 fontWeight="bold"
                 textAlign="center"
               >
-                Total Transactions: {transactions.length}
+                Tổng số giao dịch: {transactions.length}
               </Badge>
             </Box>
           </DrawerBody>
@@ -293,7 +293,7 @@ const HeaderBar = () => {
               color="gray.200"
               p={1.5}
             >
-              Logout
+              Đăng xuất
             </Button>
           </DrawerFooter>
         </DrawerContent>
