@@ -120,7 +120,9 @@ const Login = () => {
         onClick={() => {
           setEmail("guest@test.com");
           setPassword("guesttest");
-          submitHandler();
+          setTimeout(() => {
+            submitHandler();
+          }, 50);
         }}
         isLoading={loading}
       >
